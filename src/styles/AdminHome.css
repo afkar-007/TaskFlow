@@ -1,0 +1,395 @@
+.home-page {
+  min-height: 100vh;
+  background: #08090b;
+  color: #f5f5f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-navbar {
+  min-height: 76px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222326;
+}
+
+.home-logo {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+
+.home-logo span {
+  color: #92959d;
+}
+
+.home-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.home-user {
+  color: #c3c4ca;
+  font-size: 14px;
+}
+
+.home-logout {
+  background: transparent;
+  border: 1px solid #45464b;
+  color: #f5f5f7;
+  padding: 10px 17px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.home-logout:hover {
+  background: #202124;
+}
+
+.home-content {
+  max-width: 1200px;
+  width: 84%;
+  margin: auto;
+  padding: 70px 0;
+}
+
+.home-welcome {
+  padding-bottom: 65px;
+}
+
+.home-eyebrow {
+  color: #9b9da5;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.home-welcome h1 {
+  margin: 24px 0 18px;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -2.5px;
+}
+
+.home-welcome h1 span {
+  color: #92959d;
+}
+
+.home-description {
+  color: #a3a5ad;
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.create-task-btn {
+  margin-top: 22px;
+  padding: 14px 22px;
+  background: #f1f1f3;
+  color: #111214;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-task-btn:hover {
+  background: #d5d6da;
+}
+
+.task-overview {
+  margin-bottom: 65px;
+}
+
+.overview-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.overview-heading h2,
+.recent-tasks h2 {
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+
+.overview-heading span {
+  color: #a3a5ad;
+  font-size: 13px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.overview-card {
+  padding: 25px 22px;
+  background: #111214;
+  border: 1px solid #26272b;
+  border-radius: 16px;
+  transition: border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.overview-card:hover {
+  border-color: #65666d;
+  transform: translateY(-3px);
+}
+
+.overview-card > span {
+  color: #b4b5bc;
+  font-size: 13px;
+}
+
+.overview-card h3 {
+  font-size: 34px;
+  margin: 22px 0 10px;
+}
+
+.overview-card p {
+  margin: 0;
+  color: #858790;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.recent-tasks > div:first-child p {
+  color: #92949c;
+  font-size: 14px;
+}
+
+.empty-tasks {
+  margin-top: 24px;
+  min-height: 230px;
+  border: 1px dashed #333439;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.empty-tasks > i {
+  font-size: 32px;
+  color: #a1a3aa;
+}
+
+.empty-tasks h3 {
+  font-size: 17px;
+  margin: 17px 0 5px;
+}
+
+.empty-tasks p {
+  color: #92949c;
+  font-size: 13px;
+}
+
+
+.all-tasks-section {
+  margin-top: 32px;
+  padding: 26px;
+  background: #111214;
+  border: 1px solid #292a2d;
+  border-radius: 18px;
+  color: #f5f5f7;
+}
+
+.tasks-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.tasks-heading h2 {
+  margin: 0 0 7px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.tasks-heading p {
+  margin: 0;
+  color: #929298;
+  font-size: 14px;
+}
+
+.tasks-heading > span {
+  color: #d6d6dc;
+  background: #222327;
+  border: 1px solid #38393e;
+  padding: 8px 13px;
+  border-radius: 9px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #17181b;
+  border: 1px solid #292a2e;
+  border-radius: 13px;
+  margin-top: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.task-card:hover {
+  border-color: #55565d;
+}
+
+.task-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.task-info h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.task-info > p {
+  margin: 0 0 14px;
+  color: #a1a1a8;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-meta span {
+  padding: 6px 9px;
+  border: 1px solid #34353a;
+  border-radius: 7px;
+  color: #c6c6cc;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.delete-task-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 10px 13px;
+  background: transparent;
+  border: 1px solid #6d3539;
+  border-radius: 9px;
+  color: #ff777e;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-task-btn:hover {
+  background: #382023;
+  border-color: #a84b52;
+}
+
+.empty-tasks {
+  padding: 35px 12px;
+  text-align: center;
+  color: #929298;
+}
+.delete-task-btn:disabled{
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .all-tasks-section {
+    padding: 16px;
+  }
+
+  .task-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .delete-task-btn {
+    width: 100%;
+  }
+
+  .tasks-heading h2 {
+    font-size: 19px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .home-navbar {
+    padding: 0 5%;
+  }
+
+  .home-logo {
+    font-size: 22px;
+  }
+
+  .home-nav-right {
+    gap: 10px;
+  }
+
+  .home-user {
+    display: none;
+  }
+
+  .home-content {
+    width: 90%;
+    padding: 48px 0;
+  }
+
+  .home-welcome {
+    padding-bottom: 45px;
+  }
+
+  .home-welcome h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .overview-grid {
+    gap: 10px;
+  }
+
+  .overview-card {
+    padding: 20px 15px;
+  }
+
+  .overview-card h3 {
+    font-size: 29px;
+  }
+}
