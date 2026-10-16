@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import '../styles/profile.css'
+import '../styles/Profile.css'
 import { fetchUser } from "../Services/userService";
 
 function Profile() {
