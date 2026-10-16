@@ -51,7 +51,7 @@ function Task() {
     
 
       const response = await fetch(
-        `hhttps://taskflow-backend-zq3y.onrender.com/task/editTask/${id}`,
+        `https://taskflow-backend-zq3y.onrender.com/task/editTask/${id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
