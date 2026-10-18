@@ -11,7 +11,7 @@ function AdminHome() {
   const navigate = useNavigate();
   const [task, setTask] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [deleteLoading, setDeleteLoading] = useState(false);
+  const [deleteLoading, setDeleteLoading] = useState(null);
 
   const todoTask = task.filter((sends) => sends.status === "To Do").length;
   const inProgressTasks = task.filter(
@@ -66,7 +66,8 @@ function AdminHome() {
 
   async function deleteTask(id) {
     try {
-      setDeleteLoading(true);
+      setDeleteLoading(id)
+      
       const response = await DeleteTask(id);
 
       if (!response.ok) {
@@ -76,8 +77,9 @@ function AdminHome() {
     } catch (err) {
       console.log(err.message);
     } finally {
-      setDeleteLoading(false);
+      setDeleteLoading(null)
       fetchAllTask();
+
     }
   }
 
@@ -192,7 +194,7 @@ function AdminHome() {
                     disabled={deleteLoading}
                   >
                     <i className="bi bi-trash3"></i>
-                    {deleteLoading ? "Deleting..." : " Delete"}
+                    {deleteLoading ===task._id ? "Deleting..." : " Delete"}
                   </button>
                 </div>
               ))
