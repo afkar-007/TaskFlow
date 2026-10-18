@@ -538,6 +538,30 @@
   letter-spacing: 0.5px;
 }
 
+
+.loading-container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.loading-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.loading-container p {
+  color: #888;
+  font-size: 14px;
+}
+
+
 @media (min-width: 1500px) {
   .employee-main {
     padding-right: 65px;

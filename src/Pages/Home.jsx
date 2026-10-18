@@ -3,6 +3,7 @@ import "../styles/Home.css";
 import { fetchUser } from "../Services/userService";
 import { getCurrentUserTask } from "../Services/TaskService";
 import { useEffect, useState } from "react";
+import LoadingGif from '../assets/Loading.gif'
 
 
 
@@ -97,6 +98,13 @@ function Home() {
   const pending = task.filter((task) => task.status === "Pending").length;
 
   return (
+    <>
+    {loading ? (
+  <div className="loading-container">
+    <img src={LoadingGif} alt="Loading..." />
+    <p>Loading...</p>
+  </div>
+) :( 
     <div className="employee-dashboard">
       <aside className="employee-sidebar">
         <div className="taskflow-brand">
@@ -309,6 +317,10 @@ function Home() {
         </footer>
       </main>
     </div>
+    )}
+
+    </>
+
   );
 }
 

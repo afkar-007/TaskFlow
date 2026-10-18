@@ -5,6 +5,7 @@ import "../styles/AdminHome.css";
 import { getTask } from "../Services/TaskService";
 import { DeleteTask } from "../Services/TaskService";
 import { useState } from "react";
+import LoadingGif from '../assets/Loading.gif'
 
 function AdminHome() {
   const navigate = useNavigate();
@@ -82,6 +83,13 @@ function AdminHome() {
 
   return (
     <>
+
+       {loading ? (
+      <div className="loading-container">
+        <img src={LoadingGif} alt="Loading..." />
+        <p>Loading...</p>
+      </div>
+    ) :(
       <div className="home-page">
         <nav className="home-navbar">
           <div className="home-logo">
@@ -192,6 +200,7 @@ function AdminHome() {
           </section>
         </main>
       </div>
+    )}
     </>
   );
 }
